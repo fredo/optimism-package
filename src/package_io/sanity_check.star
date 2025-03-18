@@ -78,6 +78,7 @@ PARTICIPANT_CATEGORIES = {
     "participants": [
         "el_type",
         "el_image",
+        "el_builder_key",
         "el_log_level",
         "el_extra_env_vars",
         "el_extra_labels",

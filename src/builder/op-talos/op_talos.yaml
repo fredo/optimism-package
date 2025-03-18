@@ -1,0 +1,4 @@
+# OP-Talos Configuration
+rpc_store_url: "localhost" # Base URL for RPC store (without port)
+rpc_da_url: "http://localhost:8545" # Data availability layer RPC URL
+oracle_contract: "0x4e59b44847b379578588920cA78FbF26c0B4956C" # Oracle contract address
