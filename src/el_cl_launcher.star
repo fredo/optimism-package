@@ -25,6 +25,7 @@ rollup_boost = import_module("./mev/rollup-boost/rollup_boost_launcher.star")
 op_geth_builder = import_module("./el/op-geth/op_geth_builder_launcher.star")
 op_reth_builder = import_module("./el/op-reth/op_reth_builder_launcher.star")
 op_node_builder = import_module("./cl/op-node/op_node_builder_launcher.star")
+op_talos_builder = import_module("./builder/op-talos/op_talos_launcher.star")
 
 
 def launch(
@@ -112,6 +113,15 @@ def launch(
                 network_params.network_id,
             ),
             "launch_method": op_reth_builder.launch,
+        },
+        "op-talos": {
+            "launcher": op_talos_builder.new_op_talos_launcher(
+                deployment_output,
+                jwt_file,
+                network_params.network,
+                network_params.network_id,
+            ),
+            "launch_method": op_talos_builder.launch,
         },
     }
 
