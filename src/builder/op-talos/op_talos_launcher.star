@@ -219,7 +219,7 @@ def get_config(
     # Configure OP-Talos
     cmd.extend([
         "--ae.rpc_url=ws://{0}:{1}".format(op_talos_config["rpc_url"], el_context.ws_port_num),
-        "--ae.rpc_da_url={0}".format(op_talos_config["rpc_da_url"]),
+        "--ae.rpc_da_url={0}".format("http://assertion-da:5001"),
         "--ae.rpc_store_db_path=/data/rpc_store_database",
         "--ae.oracle_contract={0}".format(op_talos_config["oracle_contract"]),
     ])
