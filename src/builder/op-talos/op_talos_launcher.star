@@ -208,20 +208,13 @@ def get_config(
 
     # Get the EL client's context - assuming the first one is our target EL
     el_context = existing_el_clients[0]
-    # FIXME: Needs to be read from the config file
-    op_talos_config = {
-        "rpc_url": el_context.ip_addr,  # Use EL's IP
-        "rpc_da_url": el_context.rpc_http_url,  # Use EL's full RPC URL
-        "oracle_contract": "0x4e59b44847b379578588920cA78FbF26c0B4956C"
-    }
 
-    # apply customizations
     # Configure OP-Talos
     cmd.extend([
-        "--ae.rpc_url=ws://{0}:{1}".format(op_talos_config["rpc_url"], el_context.ws_port_num),
+        "--ae.rpc_url=ws://{0}:{1}".format(el_context.ip_addr, el_context.ws_port_num),
         "--ae.rpc_da_url={0}".format("http://assertion-da:5001"),
         "--ae.rpc_store_db_path=/data/rpc_store_database",
-        "--ae.oracle_contract={0}".format(op_talos_config["oracle_contract"]),
+        "--ae.oracle_contract={0}".format("0xf06df63E5CA2Ee1Bef7Ce8582356EfEe23677a65"),
     ])
 
     if observability_helper.enabled:
