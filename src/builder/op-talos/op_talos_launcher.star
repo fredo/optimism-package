@@ -214,7 +214,7 @@ def get_config(
         "--ae.rpc_url=ws://{0}:{1}".format(el_context.ip_addr, el_context.ws_port_num),
         "--ae.rpc_da_url={0}".format("http://assertion-da:5001"),
         "--ae.rpc_store_db_path=/data/rpc_store_database",
-        "--ae.oracle_contract={0}".format("0xf06df63E5CA2Ee1Bef7Ce8582356EfEe23677a65"),
+        "--ae.oracle_contract={0}".format("0xD5a4c0230f7946f3C43970012976C80EBf012b33"),
     ])
 
     if observability_helper.enabled:
