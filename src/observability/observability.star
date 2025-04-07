@@ -14,7 +14,7 @@ promtail = import_module("./promtail/promtail_launcher.star")
 grafana = import_module("./grafana/grafana_launcher.star")
 
 
-DEFAULT_SCRAPE_INTERVAL = "15s"
+DEFAULT_SCRAPE_INTERVAL = "1s"
 
 METRICS_PORT_ID = "metrics"
 METRICS_PORT_NUM = 9001
